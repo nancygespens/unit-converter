@@ -1,0 +1,138 @@
+body {
+    margin:0 auto;
+    padding: 0;
+    font-family: Inter, sans-serif;
+    background: #1C1C1C;
+}
+
+.main {
+    margin: 55px auto;
+    padding: 0;
+    height: 730px;
+    width: 550px;
+    background: #F4F4F4;
+    border-radius: 5px;
+}
+
+
+/* TOP */
+
+#top {
+    height: 285px;
+    background: #6943FF;
+    border-radius: 5px 5px 0 0;
+    display: grid;
+    text-align: center;
+    align-content: center;
+}
+
+#title {
+    margin:0 auto 30px auto;
+    font-size: 28px;
+    font-weight: 800;
+    color:#FFFFFF;
+}
+
+#input-el {
+    margin: 0 auto 25px auto;
+    height: 83px;
+    min-width: 117px; 
+    max-width: 500px;
+    width: fit-content; /* Resize based on content */
+    background: transparent;
+    text-align: center;
+    border: 2px solid #B295FF;
+    border-radius: 5px;
+    font-size: 58px;
+    font-weight: 800;
+    font-family: Inter, sans-serif;
+    color: #FFFFFF;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+#input-btn {
+    margin: auto;
+    height: 42px;
+    width: 117px;
+    border: none;
+    background:#FFFFFF;
+    border-radius: 5px;
+    color: #3D3D3D;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Inter, sans-serif;
+}
+
+#input-btn:hover {
+    background-color:#B295FF;
+    color: #FFFFFF;
+    transition: 0.4s;
+}
+
+#darkMode {
+    position: absolute;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    background: #353535;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Invert the colors of the dark mode icon */
+#darkMode.inverted {
+    filter: invert(1);
+}
+
+
+/* BOTTOM */
+
+#bottom {
+    display: grid;
+    text-align: center;
+    align-content: center;
+}
+
+#length {
+    margin-top: 36px;
+}
+
+#subtitle {
+    color:#5A537B;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 auto 9px auto;
+}
+
+.output-text {
+    color:#353535;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.box-el {
+    margin: 0 auto 23.43px;
+    height: 108.57px;
+    width: 500px;
+    background: #FFFFFF;
+    align-content: center;
+    border-radius: 5px;
+}
+
+/* DarkMode BOTTOM */
+.dark-mode {
+    background: #1F2937; 
+}
+
+.dark-mode .box-el {
+    background: #273549;
+}
+
+.dark-mode #subtitle {
+    color: #CCC1FF; 
+}
+
+.dark-mode .output-text {
+    color: #FFFFFF;
+}
