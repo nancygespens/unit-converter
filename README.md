@@ -1,8 +1,7 @@
 # Metric/Imperial Unit Converter
 
-<a href="https://boisterous-cupcake-6be8b2.netlify.app/" target="_blank">
-  <img src="https://github.com/user-attachments/assets/35a66bd3-3c8e-4711-b0e9-c5a3b73a7e04" alt="Demo">
-</a>
+[![Demo](https://github.com/user-attachments/assets/4c15272d-7823-4dea-9d42-a9e60efe6ae1)](https://boisterous-cupcake-6be8b2.netlify.app/)
+> Click the image to view the demo. The link will open in the current tab (press `Ctrl + Click` or `Cmd + Click` to open in a new tab).
 
 ## Description
 
