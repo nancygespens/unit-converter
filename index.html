@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,30 +12,34 @@
 </head>
 
 <body>
+    <!-- Main content container -->
     <div id="main" class="main">
-        <div id="top">
-            <p id="title">Metric/Imperial Unit Conversion</p>
-            <input type="text" id="input-el">
-            <button id="input-btn">Convert</button>
+        
+        <!-- Header section -->
+        <header id="top">
+            <h1 id="title">Metric/Imperial Unit Conversion</h1>
+            <input type="number" id="input-el" step="1" min="1" pattern="\d+" title="Please enter a valid number">
+            <button id="convert-btn">Convert</button>
             <img id="darkMode" class="dark-mode" src="img/sunMoon.svg" alt="dark mode icon">
-        </div>
+        </header>
 
-        <div id="bottom">
+        <!-- Main results display section -->
+        <main id="bottom">
             <div id="length" class="box-el">
-                <p id="subtitle">Length (Meter/Feet)</p>
+                <h2 id="subtitle">Length (Meter/Feet)</h2>
                 <p id="length-text" class="output-text">0 meters = 0 feet | 0 feet = 0 meters</p>
             </div>
 
             <div id="volume" class="box-el">
-                <p id="subtitle">Volume (Liters/Gallons)</p>
+                <h2 id="subtitle">Volume (Liters/Gallons)</h2>
                 <p id="volume-text" class="output-text">0 liters = 0 gallons | 0 gallons = 0 liters</p>
             </div>
 
             <div id="mass" class="box-el">
-                <p id="subtitle">Mass (Kilograms/Pounds)</p>
+                <h2 id="subtitle">Mass (Kilograms/Pounds)</h2>
                 <p id="mass-text" class="output-text">0 kilos = 0 pounds | 0 pounds = 0 kilos</p>
             </div>
-        </div>
+        </main>
     </div>
 
     <script src="index.js"></script>

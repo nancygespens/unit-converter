@@ -4,34 +4,35 @@
 1 kilogram = 2.204 pound
 */
 
-
 // METRIC/IMPERIAL UNIT CONVERSION
-const inputEl = document.getElementById("input-el")
-const inputBtn = document.getElementById("input-btn")
+const inputEl = document.getElementById("input-el");
+const convertBtn = document.getElementById("convert-btn");
 
-const lengthEl = document.getElementById("length-text")
-const volumeEl = document.getElementById("volume-text")
-const massEl = document.getElementById("mass-text")
+const lengthEl = document.getElementById("length-text");
+const volumeEl = document.getElementById("volume-text");
+const massEl = document.getElementById("mass-text");
 
-const meterToFeet =  3.28084
-const feetToMeter =  0.3048
+const meterToFeet =  3.28084;
+const feetToMeter =  0.3048;
 
-const literToGallon =  0.264172
-const gallonToLiter =  3.78541
+const literToGallon =  0.264172;
+const gallonToLiter =  3.78541;
 
-const kiloToPound =  2.20462
-const poundToKilo =  0.453592
+const kiloToPound =  2.20462;
+const poundToKilo =  0.453592;
 
-inputBtn.addEventListener("click", function() {
-    let baseValue = inputEl.value
+convertBtn.addEventListener("click", function() {
+    let baseValue = inputEl.value;
 
-    lengthEl.textContent = `${baseValue} meter = ${(baseValue * meterToFeet).toFixed(3)} feet | ${baseValue} feet = ${(baseValue * feetToMeter).toFixed(3)} meters` 
+    lengthEl.textContent = `${baseValue} meter = ${(baseValue * meterToFeet).toFixed(3)} feet | ${baseValue} feet = ${(baseValue * feetToMeter).toFixed(3)} meters`; 
 
-    volumeEl.textContent = `${baseValue} liters = ${(baseValue * literToGallon).toFixed(3)} gallons | ${baseValue} gallons = ${(baseValue * gallonToLiter).toFixed(3)} liters` 
+    volumeEl.textContent = `${baseValue} liters = ${(baseValue * literToGallon).toFixed(3)} gallons | ${baseValue} gallons = ${(baseValue * gallonToLiter).toFixed(3)} liters`; 
 
-    massEl.textContent = `${baseValue} kilos = ${(baseValue * kiloToPound).toFixed(3)} pounds | ${baseValue} pounds = ${(baseValue * poundToKilo).toFixed(3)} kilos` 
-})
+    massEl.textContent = `${baseValue} kilos = ${(baseValue * kiloToPound).toFixed(3)} pounds | ${baseValue} pounds = ${(baseValue * poundToKilo).toFixed(3)} kilos`; 
 
+    // Clear input field after conversion
+    inputEl.value = "";
+});
 
 // FUNCTION TO DARK MODE
 const darkModeBtn = document.getElementById("darkMode");
@@ -46,9 +47,6 @@ darkModeBtn.addEventListener("click", function () {
     darkModeBtn.classList.toggle("inverted");
 });
 
-
-
-
 // FUNCTION TO RESIZE INPUT SECTION
 function updateInputWidth() {
     const text = inputEl.value || " "; // Use a space if the box is empty
@@ -62,20 +60,14 @@ function updateInputWidth() {
     const textWidth = context.measureText(text).width;
 
     // Calculate the new width of the input box
-    let newWidth = textWidth + 50; // Add 50px extra space for padding
+    let newWidth = textWidth + 50; // Add some padding
+    newWidth = Math.max(newWidth, 117); // Ensure the width doesn't go below 117px
+    newWidth = Math.min(newWidth, 500); // Set the maximum width to prevent it from becoming too wide
 
-    // Make sure the width stays between 117px and 500px
-    if (newWidth < 117) {
-        newWidth = 117;
-    } else if (newWidth > 500) {
-        newWidth = 500;
-    }
-
-    // Apply the new width to the input box
-    inputEl.style.width = newWidth + "px";
+    inputEl.style.width = newWidth + "px"; // Set the new width to the input box
 }
 
-// Make the input box react when you type
+// Update input box width whenever text is entered
 inputEl.addEventListener("input", updateInputWidth);
 
 // Set the starting size of the input box

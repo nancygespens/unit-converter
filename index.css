@@ -1,5 +1,5 @@
 body {
-    margin:0 auto;
+    margin: 0 auto;
     padding: 0;
     font-family: Inter, sans-serif;
     background: #1C1C1C;
@@ -14,10 +14,8 @@ body {
     border-radius: 5px;
 }
 
-
 /* TOP */
-
-#top {
+header {
     height: 285px;
     background: #6943FF;
     border-radius: 5px 5px 0 0;
@@ -26,49 +24,48 @@ body {
     align-content: center;
 }
 
-#title {
-    margin:0 auto 30px auto;
+h1#title {
+    margin: 0 auto 30px;
     font-size: 28px;
     font-weight: 800;
-    color:#FFFFFF;
+    color: #FFFFFF;
 }
 
 #input-el {
-    margin: 0 auto 25px auto;
+    margin: 0 auto 25px;
     height: 83px;
-    min-width: 117px; 
+    min-width: 117px;
     max-width: 500px;
-    width: fit-content; /* Resize based on content */
+    width: fit-content;
     background: transparent;
     text-align: center;
     border: 2px solid #B295FF;
     border-radius: 5px;
-    font-size: 58px;
-    font-weight: 800;
-    font-family: Inter, sans-serif;
+    font: 800 58px Inter, sans-serif;
     color: #FFFFFF;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
 
-#input-btn {
+/* Convert button */
+#convert-btn {
     margin: auto;
     height: 42px;
     width: 117px;
     border: none;
-    background:#FFFFFF;
+    background: #FFFFFF;
     border-radius: 5px;
     color: #3D3D3D;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: Inter, sans-serif;
+    font: 500 16px Inter, sans-serif;
+    cursor: pointer;
 }
 
-#input-btn:hover {
-    background-color:#B295FF;
+#convert-btn:hover {
+    background-color: #B295FF;
     color: #FFFFFF;
     transition: 0.4s;
 }
 
+/* DarkMode Button */
 #darkMode {
     position: absolute;
     right: 0;
@@ -79,15 +76,12 @@ body {
     border-radius: 5px 0 0 5px;
 }
 
-/* Invert the colors of the dark mode icon */
 #darkMode.inverted {
     filter: invert(1);
 }
 
-
 /* BOTTOM */
-
-#bottom {
+main {
     display: grid;
     text-align: center;
     align-content: center;
@@ -97,17 +91,15 @@ body {
     margin-top: 36px;
 }
 
-#subtitle {
-    color:#5A537B;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0 auto 9px auto;
+h2#subtitle {
+    color: #5A537B;
+    font: 600 20px Inter, sans-serif;
+    margin: 0 auto 9px;
 }
 
 .output-text {
-    color:#353535;
-    font-size: 14px;
-    font-weight: 400;
+    color: #353535;
+    font: 400 14px Inter, sans-serif;
     margin: 0 auto;
 }
 
@@ -115,24 +107,37 @@ body {
     margin: 0 auto 23.43px;
     height: 108.57px;
     width: 500px;
-    background: #FFFFFF;
+    background: #EAEAEA;
     align-content: center;
     border-radius: 5px;
 }
 
 /* DarkMode BOTTOM */
 .dark-mode {
-    background: #1F2937; 
+    background: #1F2937;
 }
 
 .dark-mode .box-el {
     background: #273549;
 }
 
-.dark-mode #subtitle {
-    color: #CCC1FF; 
+.dark-mode h2#subtitle {
+    color: #CCC1FF;
 }
 
 .dark-mode .output-text {
     color: #FFFFFF;
+}
+
+/* Remove number spinner in Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove number spinner in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
